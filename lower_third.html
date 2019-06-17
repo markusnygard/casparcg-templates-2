@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lower Third</title>
+    <link rel="stylesheet" href="css/lower_third.css">
+</head>
+<body>
+    <div class="lower-third">
+        <div class="slash">/</div>
+        <div class="mask title">
+            <div class="text"></div>
+        </div>
+        <div class="mask subtitle">
+            <div class="text"></div>
+        </div>
+    </div>
+    <script>
+        var $titleText = document.querySelector('.title .text')
+        var $subtitleText = document.querySelector('.subtitle .text')
+        var $lowerThird = document.querySelector('.lower-third')
+        function update(arg) {
+            var json = JSON.parse(arg)
+            $titleText.textContent = json.title;
+            $subtitleText.textContent = json.subtitle;
+        }
+
+        function play() {
+            $lowerThird.className = 'lower-third in'
+        }
+
+        function next() {
+            $lowerThird.className = 'lower-third out'
+        }
+
+        function stop() {
+            
+        }
+    	
+    </script>
+</body>
+</html>

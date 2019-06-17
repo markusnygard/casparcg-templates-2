@@ -1,0 +1,23 @@
+@import url('font.css');
+@import url('base.css');
+
+.clock-small {
+    transition: all 1s ease;
+    position: absolute;
+    bottom: 20px;
+    right: -100px;
+    padding: 2px 20px 2px 8px;
+    background: rgba(0, 0, 0, 0.2);
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+
+.clock-small.in {
+    right: 0;
+}
+
+.clock-small.out {
+    right: -100px;
+}
